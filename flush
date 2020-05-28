@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# author:  Bas Huis
+# website: https://github.com/bas080
+# created: Thu May 28 12:25:36 CEST 2020
+# changed: Thu May 28 12:23:51 CEST 2020
+# license: GNU General Public License 3.0
+
+source <(cat <(echo 'wrapper() {') - <(echo '}'));
+type wrapper | tail -n +4 | head -n -1 | sed 's/^    //g'
