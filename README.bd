@@ -1,0 +1,25 @@
+#!/usr/bin/env barkdown
+
+# Flush
+
+> Formatter / beatifier for your shell scripts.
+
+This is an answer to a [Stackoverflow][1] question.
+
+## Usage
+
+Stdin your bash script into the flush process. It will then stdout the
+formatted version of the script.
+
+```bash
+$ ./flush < flush
+```
+
+> Notice that it does strip the comments.
+
+## Installation
+
+Place the `flush` file in a directory that is on your PATH and make it
+executable.
+
+[1]:https://stackoverflow.com/questions/12046886/code-formatter-beautifier-for-bash-in-command-line
