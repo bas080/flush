@@ -6,5 +6,5 @@
 # changed: Thu May 28 12:23:51 CEST 2020
 # license: GNU General Public License 3.0
 
-source <(cat <(echo 'wrapper() {') - <(echo '}'));
-type wrapper | tail -n +4 | head -n -1 | sed 's/^    //g'
+. <( echo wrapper\(\){ ; cat ; echo } );
+type wrapper | sed '1,/{/d; $d;s/^    //g'
